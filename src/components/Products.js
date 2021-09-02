@@ -1,11 +1,11 @@
 import React from "react"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
-import Project from "./Project"
+import Product from "./Product"
 
-const Projects = () => {
+const Products = () => {
   const data = useStaticQuery(graphql`
-    query Projects {
+    query Products {
       allContentfulProducts {
         nodes {
           image {
@@ -15,7 +15,7 @@ const Projects = () => {
           }
           title
           description
-          projects {
+          products {
             projects {
               name
               by
@@ -29,14 +29,15 @@ const Projects = () => {
   return (
     <div>
       <hr className="divider" />
-      <div id="projects" className="products">
-        {data.allContentfulProducts.nodes.map(project => {
+      <div id="products" className="products">
+        <div id="products-anchor" className="products-anchor"></div>
+        {data.allContentfulProducts.nodes.map(product => {
           return (
-            <Project
-              img={project.image.fluid}
-              title={project.title}
-              desc={project.description}
-              projects={project.projects.projects}
+            <Product
+              img={product.image.fluid}
+              title={product.title}
+              desc={product.description}
+              projects={product.products.projects}
             />
           )
         })}
@@ -45,4 +46,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default Products

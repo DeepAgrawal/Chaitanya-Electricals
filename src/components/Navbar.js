@@ -56,19 +56,19 @@ const Navbar = () => {
         </div>
         <ul className={`nav ${mobileMenuClass}`}>
           <li onClick={closeMenu} className="nav-item">
-            <Link to="/#home">Home</Link>
+            <Link to="/#header-anchor">Home</Link>
           </li>
           <li onClick={closeMenu} className="nav-item">
-            <Link to="/#about">About</Link>
+            <Link to="/#about-anchor">About</Link>
           </li>
           <li onClick={closeMenu} className="nav-item">
-            <Link to="/#projects">Projects</Link>
+            <Link to="/#products-anchor">Products</Link>
           </li>
           <li onClick={closeMenu} className="nav-item">
-            <Link to="/#certifications">Certifications</Link>{" "}
+            <Link to="/#certifications">Certifications</Link>
           </li>
           <li onClick={closeMenu} className="nav-item">
-            <Link to="/#contact">Contact Us</Link>{" "}
+            <Link to="/#contact">Contact Us</Link>
           </li>
         </ul>
       </nav>

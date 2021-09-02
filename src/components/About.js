@@ -22,6 +22,7 @@ const About = () => {
 
   return (
     <div id="about" className="container">
+      <div id="about-anchor" className="about-anchor"></div>
       <div className="about-container">
         <div className="about-left">
           <h1 className="about-title">About Us</h1>
